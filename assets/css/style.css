@@ -1,0 +1,24 @@
+/* = Reset
+----------------------------------------------------------------------------------------------------------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, hr, a, a img, font, img, dd, dl, dt, li, ol, ul, blockquote, fieldset, form, label, legend, table, caption, tr, th, td{margin: 0;padding: 0;border: 0;line-height: inherit;font-family: inherit;font-size: 100%;}
+
+/* = Base
+----------------------------------------------------------------------------------------------------------------- */
+body{background: #fff url(/assets/img/wood.png); font-size: 0.7em; font-family: Arial, Helvetica, Sans-Serif; color: #777;}
+h1{display: inline;}
+p{line-height: 1.8em; margin-bottom: 12px;}
+dfn{display: block; font-family: Georgia, Times, Times New Roman, Serif; color: #111; font-style: normal; font-size: 1.3em; padding-bottom: 1px;}
+abbr{border-bottom: dotted 1px #111;}
+a{color: #DD4B39;}
+cite a{float: left; height: 10px; width: 10px; background: url(/assets/img/link.png) no-repeat left top; text-indent: 100%; white-space: nowrap; overflow: hidden; margin-right: 10px;}
+
+/* = Listing
+----------------------------------------------------------------------------------------------------------------- */
+.buzz{list-style: none; margin: 20px; zoom: 1;}
+.buzz:after{content: ".";clear: both;display: block;height: 0;visibility: hidden;}
+.buzz li{float: left; height: 104px; width: 196px; padding: 45px 10px 0 31px; margin: 0 20px 20px 0; background: url(/assets/img/note.png) no-repeat left top;}
+
+/* = Top Strip
+----------------------------------------------------------------------------------------------------------------- */
+.strip{background: #222; padding: 20px; color: #fff; font-size: 1.2em;}
+.strip p{line-height: 1.4em; margin: 20px 0;}
