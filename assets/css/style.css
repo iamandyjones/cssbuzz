@@ -4,21 +4,39 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, hr, a, a img, font, img, dd, d
 
 /* = Base
 ----------------------------------------------------------------------------------------------------------------- */
-body{background: #fff url(/assets/img/wood.png); font-size: 0.7em; font-family: Arial, Helvetica, Sans-Serif; color: #777;}
-h1{display: inline;}
+html, body{height: 100%;}
+body{background: #fff; font-size: 2em; font-family: 'Gentium Book Basic', serif; color: #222; text-align: center;}
+h1, .index a{line-height: 1em;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #222; margin: 0 0 20px 0; font-weight: 700; text-transform: uppercase;}
+.index a{color: #fff; font-size: 2.5em;}
+.index a:hover{color: #777;}
+
 p{line-height: 1.8em; margin-bottom: 12px;}
-dfn{display: block; font-family: Georgia, Times, Times New Roman, Serif; color: #111; font-style: normal; font-size: 1.3em; padding-bottom: 1px;}
-abbr{border-bottom: dotted 1px #111;}
-a{color: #DD4B39;}
-cite a{float: left; height: 10px; width: 10px; background: url(/assets/img/link.png) no-repeat left top; text-indent: 100%; white-space: nowrap; overflow: hidden; margin-right: 10px;}
+abbr{border-bottom: dotted 1px #111; font-style: normal;}
+.desc{font-style: italic;}
 
-/* = Listing
------------------------------------------------------------------------------------------------------------------ */
-.buzz{list-style: none; margin: 20px; zoom: 1;}
-.buzz:after{content: ".";clear: both;display: block;height: 0;visibility: hidden;}
-.buzz li{float: left; height: 104px; width: 196px; padding: 45px 10px 0 31px; margin: 0 20px 20px 0; background: url(/assets/img/note.png) no-repeat left top;}
+.content-list{margin: 20px;}
+.nav{background: #000; height: 300px;}
+.navToggle{}
 
-/* = Top Strip
+.index ul{margin: 0; list-style-type: none; text-align: left;}
+
+.rel{position: relative;}
+
+/* = Effects
 ----------------------------------------------------------------------------------------------------------------- */
-.strip{background: #222; padding: 20px; color: #fff; font-size: 1.2em;}
-.strip p{line-height: 1.4em; margin: 20px 0;}
+h1, .desc{opacity: 1; -webkit-transition: opacity 0.5s, color 0.5s, -webkit-transform 250ms ease; -moz-transition: opacity 0.5s, color 0.5s, -moz-transform 250ms ease; -o-transition: opacity 0.5s, color 0.5s, -o-transform 250ms ease; transition: opacity 0.5s, color 0.5s, transform 250ms ease; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.wf-loading h1, .wf-loading .desc{opacity: 0; -webkit-transition: none; -moz-transition: none; -o-transition:none; transition: none;}
+.wf-loading h1{-webkit-transform: translate3d(5%, 0, 0); -moz-transform: translate3d(5%, 0, 0); -ms-transform: translate3d(5%, 0, 0); -o-transform: translate3d(5%, 0, 0); transform: translate3d(5%, 0, 0);}
+.wf-loading .desc{-webkit-transform: translate3d(-5%, 0, 0); -moz-transform: translate3d(-5%, 0, 0); -ms-transform: translate3d(-5%, 0, 0); -o-transform: translate3d(-5%, 0, 0); transform: translate3d(-5%, 0, 0);}
+
+.item{-webkit-transition: -webkit-transform 250ms ease; -moz-transition: -moz-transform 250ms ease; -o-transition: -o-transform 250ms ease; transition: transform 250ms ease;}
+.shifted{-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.shifted .item{-webkit-transform: scale(0.6); -moz-transform: scale(0.6); -ms-transform: scale(0.6); -o-transform: scale(0.6); transform: scale(0.6);}
+.shifted h1{color: #888;}
+
+/*
+.wrapper{-webkit-transition: -webkit-transform 500ms ease 50ms; -moz-transition: -moz-transform 500ms ease 50ms; -o-transition: -o-transform 500ms ease 50ms; transition: transform 500ms ease 50ms; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.wrapper.offset{-webkit-transition: -webkit-transform 500ms ease 50ms; -moz-transition: -moz-transform 500ms ease 50ms; -o-transition: -o-transform 500ms ease 50ms; transition: transform 500ms ease 50ms; -webkit-transform: translate3d(500px, 0, 0); -moz-transform: translate3d(500px, 0, 0); -ms-transform: translate3d(500px, 0, 0); -o-transform: translate3d(500px, 0, 0); transform: translate3d(500px, 0, 0);}
+*/
+.off-canvas{position: absolute; top: 0; left: 0; z-index: 2; background: #222; color: fff; min-height: 100%; width: 100%; -webkit-transition: -webkit-transform 500ms ease; -moz-transition: -moz-transform 500ms ease; -o-transition: -o-transform 500ms ease; transition: transform 500ms ease; -webkit-transform: translate3d(-100%, 0, 0); -moz-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);}
+.off-canvas.in-view{-webkit-transition: -webkit-transform 500ms ease-out; -moz-transition: -moz-transform 500ms ease-out; -o-transition: -o-transform 500ms ease-out; transition: transform 500ms ease-out; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
